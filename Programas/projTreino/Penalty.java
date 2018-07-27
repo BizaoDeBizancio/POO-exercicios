@@ -1,3 +1,5 @@
+import jogadores.*;
+
 public class Penalty {
 	
 	private static int contagem = 0;

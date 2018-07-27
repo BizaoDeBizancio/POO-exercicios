@@ -1,3 +1,5 @@
+package jogadores;
+
 public class GoleiroComputador extends Jogador implements IDefendeStrategy{
     public GoleiroComputador() {
         super("Computador Goleiro");

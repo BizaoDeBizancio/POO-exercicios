@@ -1,3 +1,5 @@
+package jogadores;
+
 import java.util.Scanner;
 
 public class CobradorPessoa extends Jogador implements ICobradorStrategy{

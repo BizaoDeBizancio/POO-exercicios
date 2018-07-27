@@ -1,3 +1,5 @@
+import jogadores.*;
+
 public class Treino {
 
     public static ICobradorStrategy instanciaCobrador(String[] args) {

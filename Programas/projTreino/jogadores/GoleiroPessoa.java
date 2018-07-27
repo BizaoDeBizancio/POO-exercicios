@@ -1,3 +1,5 @@
+package jogadores;
+
 import java.util.Scanner;
 
 public class GoleiroPessoa extends Jogador implements IDefendeStrategy{

@@ -1,3 +1,5 @@
+package jogadores;
+
 public class CobradorComputador extends Jogador implements ICobradorStrategy{
 	public CobradorComputador() {
 		super("Computador Cobrador");
