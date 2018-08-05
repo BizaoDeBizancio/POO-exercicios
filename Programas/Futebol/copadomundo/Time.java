@@ -62,5 +62,20 @@ public class Time {
         }
         return textEscalacao;
     }
+    
+    public boolean verificaTime() {
+        int nGoleiros = 0;
+        int nLinha    = 0;
+        
+        for(int i = 0 ; i < jogadores.length ; i++) {
+            if(jogadores[i] instanceof Goleiro) {
+                nGoleiros++;
+            } else if (jogadores[i] instanceof Atacante || jogadores[i] instanceof Lateral) {
+                nLinha++;
+            }
+        }
+        
+        return nGoleiros == 1 && nLinha == 10;
+    }
 
 }

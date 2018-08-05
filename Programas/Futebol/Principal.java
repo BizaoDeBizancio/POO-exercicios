@@ -1,6 +1,15 @@
 import copadomundo.*;
 
 public class Principal {
+    
+    public static void verificaValidade(boolean validade) {
+        if(validade) {
+            System.out.println("Time valido");
+        } else {
+            System.out.println("Time invalido");
+        }
+    }
+    
     public static void main(String[] args) {
         try{
             Time t1 = new Time("ABC");
@@ -19,14 +28,43 @@ public class Principal {
             t2.adicionarJogador(j5);
             t2.adicionarJogador(j6);
             
-            System.out.println(t1.escalacao());
-            System.out.println(t2.escalacao());
+            System.out.print(t1.escalacao());
+            verificaValidade(t1.verificaTime());
+            System.out.println();
+            
+            System.out.print(t2.escalacao());
+            verificaValidade(t2.verificaTime());
+            System.out.println();
             
             Jogador j7 = new Lateral("L3", 4, "Esquerdo");
             t1.substituir(j7, 11);
             
-            System.out.println(t1.escalacao());
-            System.out.println(t2.escalacao());
+            System.out.print(t1.escalacao());
+            verificaValidade(t1.verificaTime());
+            System.out.println();
+            
+            System.out.print(t2.escalacao());
+            verificaValidade(t2.verificaTime());
+            System.out.println();
+            
+            /* Exemplo de time valido
+            Time t3 = new Time ("Valido");
+            t3.adicionarJogador(new Goleiro("A", 1));
+            t3.adicionarJogador(new Atacante("B", 2));
+            t3.adicionarJogador(new Atacante("B", 3));
+            t3.adicionarJogador(new Atacante("B", 4));
+            t3.adicionarJogador(new Atacante("B", 5));
+            t3.adicionarJogador(new Atacante("B", 6));
+            t3.adicionarJogador(new Atacante("B", 7));
+            t3.adicionarJogador(new Atacante("B", 8));
+            t3.adicionarJogador(new Atacante("B", 9));
+            t3.adicionarJogador(new Atacante("B", 10));
+            t3.adicionarJogador(new Atacante("B", 11));
+          
+            System.out.print(t3.escalacao());
+            verificaValidade(t3.verificaTime());
+            System.out.println();
+            */
             
         } catch (Exception e) {
             System.out.println(e.toString());
