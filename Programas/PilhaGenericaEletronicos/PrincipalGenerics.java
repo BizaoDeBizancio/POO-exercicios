@@ -11,11 +11,11 @@ public class PrincipalGenerics {
 			Eletronico notebook2 = new Notebook("0000", 25);
 			
 			PilhaGenericaEletronico<Notebook> p1 = new PilhaGenericaEletronico<Notebook>(10); // Esta pilha armazena somente eletronicos
-			p1.empilha(notebook1);
-			p1.empilha(notebook2);
+			p1.empilha((Notebook) notebook1);
+			p1.empilha((Notebook) notebook2);
 
 			PilhaGenericaEletronico<Eletronico> p2 = new PilhaGenericaEletronico<Eletronico>(10);
-			p2.empilha(tablet);
+			p2.empilha((Tablet) tablet);
 
 			for (int i = 0; i < 2; i++)
 				System.out.println("Item P1: " + p1.desempilha());
