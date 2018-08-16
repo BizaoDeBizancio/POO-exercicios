@@ -2,8 +2,8 @@ package estrutura;
 
 public class FilaSimples {
 
-	private int inicio, fim;
-	private Object[] itens;
+	protected int inicio, fim;
+	protected Object[] itens;
 	
 	public FilaSimples(int tamanhoMax) {
 		this.itens = new Object[tamanhoMax];
@@ -31,7 +31,7 @@ public class FilaSimples {
 		return this.fim;
 	}
 	
-	int getTamanhoMax() {
+	public int getTamanhoMax() {
 		if (itens != null)
 			return this.itens.length;
 		else

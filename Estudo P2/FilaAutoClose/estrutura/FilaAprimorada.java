@@ -3,15 +3,12 @@ package estrutura;
 import exceptions.*;
 
 public class FilaAprimorada extends FilaSimples {
-	private int inicio, fim;
-	private Object[] itens;
+    
     private int itensNaFila;
     
     public FilaAprimorada(int tamanhoMax) {
         super(tamanhoMax);
         this.itens = new Object[tamanhoMax];
-        this.inicio = 0;
-        this.fim = 0;
         this.itensNaFila = 0;
     }
     
@@ -37,14 +34,6 @@ public class FilaAprimorada extends FilaSimples {
         } else {
             throw new FilaVaziaException();
         }
-	}
-    
-    @Override
-	int getTamanhoMax() {
-		if (itens != null)
-			return this.itens.length;
-		else
-			return -1;
 	}
 
 }

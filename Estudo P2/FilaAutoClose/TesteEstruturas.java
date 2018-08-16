@@ -6,8 +6,7 @@ public class TesteEstruturas {
     public static void main(String[] args) {
     
         System.out.println("--- Teste 1 ---");
-        try {
-            FilaSimples Fila = new FilaAprimorada(3);
+        try (FilaRecurso Fila = new FilaRecurso(3)){
             Fila.enfileira("10");
             Fila.enfileira("20");
             Fila.enfileira("30");
@@ -29,8 +28,7 @@ public class TesteEstruturas {
         System.out.println();
         System.out.println("--- Teste 2 ---");
         
-        try {
-            FilaSimples Fila = new FilaAprimorada(3);
+        try (FilaRecurso Fila = new FilaRecurso(3)){
             Fila.enfileira("10");
             Fila.enfileira("20");
             Fila.enfileira("30");
