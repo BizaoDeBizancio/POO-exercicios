@@ -1,0 +1,15 @@
+package jogadores;
+
+public class Jogador {
+
+	private String nome;
+	
+	public Jogador(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
+	
+}
